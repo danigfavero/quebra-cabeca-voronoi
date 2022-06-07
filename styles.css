@@ -1,0 +1,40 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration:none;
+    color: black;
+    font-weight: bolder;
+}
+
+a:hover {
+    color: grey;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.header-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+}
+
+.header-item {
+    display: inline;
+    padding: 1rem;
+}
+
+.header-link {
+    font-size: 16px;
+}
+
+.content {
+    margin-left: 2rem;
+}
+
+.stlviewer {
+    position: relative;
+}
