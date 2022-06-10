@@ -14,6 +14,12 @@ a:hover {
 
 h1 {
     font-weight: bold;
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 18px;
 }
 
 .header-menu {
@@ -33,6 +39,7 @@ h1 {
 
 .content {
     margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .stlviewer {
