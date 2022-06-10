@@ -30,19 +30,28 @@
 </head>
 
 <body>
-    <!--Navigation bar-->
-    <div id="nav-placeholder"></div>
-
-    <script>
-        $(function(){
-        $("#nav-placeholder").load("nav.html");
-        });
-    </script>
-    <!--end of Navigation bar-->
+    <nav>
+        <ul class="header-menu">
+            <li class="header-item"><a class="header-link" href="">início</a></li>
+            <li class="header-item"><a class="header-link" href="#voronoi">o que é voronoi?</a></li>
+            <li class="header-item"><a class="header-link" href="#gabarito">nosso quebra-cabeça</a></li>
+            <li class="header-item"><a class="header-link" href="#about">sobre nós</a></li>
+        </ul>
+    </nav>
 
     <div class="content">
-        <h1> Quebra-Cabeça Voronoi </h1>
+        <h1 id="voronoi"> Quebra-Cabeça Voronoi </h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam neque vel libero fringilla, ut cursus justo tincidunt. Suspendisse eget neque iaculis, maximus magna sit amet, egestas nunc. Sed sollicitudin quis massa et porttitor. In augue ligula, lacinia non sagittis sed, auctor sed purus. Nunc imperdiet semper sapien a tincidunt. Sed sed purus a risus scelerisque dignissim nec mattis massa. Aliquam eu felis non elit posuere tempus. Suspendisse dictum lacinia metus vel vulputate. Nam semper nunc faucibus ipsum luctus luctus. Vivamus eu augue id nulla blandit imperdiet sed et erat. Fusce porttitor accumsan mi, sed pulvinar mi placerat ac. Praesent viverra interdum facilisis. Mauris quis iaculis erat, eu sagittis leo.</p>
         <div class=stlviewer data-src="{{ url_for('static', filename='gabaritofinal.stl') }}"></div>
+    </div>
+
+    <div class="content">
+        <h1 id="gabarito"> Gabarito </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam neque vel libero fringilla, ut cursus justo tincidunt. Suspendisse eget neque iaculis, maximus magna sit amet, egestas nunc. Sed sollicitudin quis massa et porttitor. In augue ligula, lacinia non sagittis sed, auctor sed purus. Nunc imperdiet semper sapien a tincidunt. Sed sed purus a risus scelerisque dignissim nec mattis massa. Aliquam eu felis non elit posuere tempus. Suspendisse dictum lacinia metus vel vulputate. Nam semper nunc faucibus ipsum luctus luctus. Vivamus eu augue id nulla blandit imperdiet sed et erat. Fusce porttitor accumsan mi, sed pulvinar mi placerat ac. Praesent viverra interdum facilisis. Mauris quis iaculis erat, eu sagittis leo.</p>
+    </div>
+
+    <div class="content">
+        <h1 id="about"> Sobre nós </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam neque vel libero fringilla, ut cursus justo tincidunt. Suspendisse eget neque iaculis, maximus magna sit amet, egestas nunc. Sed sollicitudin quis massa et porttitor. In augue ligula, lacinia non sagittis sed, auctor sed purus. Nunc imperdiet semper sapien a tincidunt. Sed sed purus a risus scelerisque dignissim nec mattis massa. Aliquam eu felis non elit posuere tempus. Suspendisse dictum lacinia metus vel vulputate. Nam semper nunc faucibus ipsum luctus luctus. Vivamus eu augue id nulla blandit imperdiet sed et erat. Fusce porttitor accumsan mi, sed pulvinar mi placerat ac. Praesent viverra interdum facilisis. Mauris quis iaculis erat, eu sagittis leo.</p>
     </div>
 </body>
