@@ -25,33 +25,58 @@
     <script src="{{url_for('static', filename = '/three.js/examples/js/controls/OrbitControls.js')}}"></script>
     <script src="{{url_for('static', filename = 'canvas.js')}}"></script>
 
-    <title>Quebra-Cabeça Voronoi</title>
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.svg') }}">
+    <title>Cubo Voronoi</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.svg') }}">
 </head>
 
 <body>
     <nav>
         <ul class="header-menu">
-            <li class="header-item"><a class="header-link" href="">início</a></li>
-            <li class="header-item"><a class="header-link" href="#voronoi">o que é voronoi?</a></li>
-            <li class="header-item"><a class="header-link" href="#gabarito">nosso quebra-cabeça</a></li>
-            <li class="header-item"><a class="header-link" href="#about">sobre nós</a></li>
+            <li class="header-item"><a class="header-link" href="">O que é Voronoi?</a></li>
+            <li class="header-item"><a class="header-link" href="#gabarito">Solução</a></li>
+            <li class="header-item"><a class="header-link" href="#about">Sobre Nós</a></li>
         </ul>
+        <hr>
     </nav>
 
+
     <div class="content">
-        <h1 id="voronoi"> Quebra-Cabeça Voronoi </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam neque vel libero fringilla, ut cursus justo tincidunt. Suspendisse eget neque iaculis, maximus magna sit amet, egestas nunc. Sed sollicitudin quis massa et porttitor. In augue ligula, lacinia non sagittis sed, auctor sed purus. Nunc imperdiet semper sapien a tincidunt. Sed sed purus a risus scelerisque dignissim nec mattis massa. Aliquam eu felis non elit posuere tempus. Suspendisse dictum lacinia metus vel vulputate. Nam semper nunc faucibus ipsum luctus luctus. Vivamus eu augue id nulla blandit imperdiet sed et erat. Fusce porttitor accumsan mi, sed pulvinar mi placerat ac. Praesent viverra interdum facilisis. Mauris quis iaculis erat, eu sagittis leo.</p>
-        <div class=stlviewer data-src="{{ url_for('static', filename='gabaritofinal.stl') }}"></div>
+        <h1 id="voronoi"> O Que É O Voronoi? </h1>
+        <p>Os <b>diagramas de Voronoi</b>, ou como também são conhecidos polígonos de Thiessen, foram desenvolvidos pelo matemático russo Georgy Fedoseevich Voronoy em 1907. Tal regra matemática estabelece um conjunto associado de regiões em torno de pontos no plano euclidiano, em que elas delimitam os locais mais próximos de um dos pontos do que de qualquer outro ponto.</p>
+        <p>A animação abaixo representa uma <b>tesselação de Voronoi</b> emergindo de um crescimento radial a partir de um conjunto de pontos:</p>
+        <img class="gif" src="{{ url_for('static', filename='img/voronoi_growth_euclidean.gif') }}" alt="Animação gerando um diagrama de Voronoi">
+        <p>Note que cada região termina quando se encontra com a sua vizinha e, como a velocidade dos crescimentos radiais é a mesma, as bordas das regiões definem segmentos de reta <b>equidistantes</b> aos pontos que as geram.</p>
+        <p>Uma forma intuitiva de <b>construir um diagrama de Voronoi a partir de uma coleção de pontos</b>, é traçar arestas entre os pontos de modo a gerar uma triangulação, encontrar os circuncentros dos triângulos gerados e utilizá-los como vértices do diagrama. As retas que determinam os circuncentros definem as arestas do Voronoi. A animação abaixo reproduz esse algoritmo: </p>
+        <img class="gif" src="{{ url_for('static', filename='img/triangulation.gif') }}" alt="Animação gerando um diagrama de Voronoi">
+        <p>Esse modelo matemático pode ser aplicado em diversas situações, como:</p>
+        <ul>
+            <li>Estudar a epidemia de cólera na Inglaterra em 1854, traçando uma relação entre as áreas com mais mortes e as áreas do bairro Soho;</li>
+            <li>Fazer o diagrama Voronoi de pontos de destino (como hospitais) para saber qual está mais próximo (georreferenciamento), no caso será no ponto central do polígono onde você estiver;</li>
+            <li>Pode ser utilizado na representação do volume livre do polímero;</li>
+            <li>Para calcular a precipitação de uma área, com base em uma série de medições pontuais, em climatologia;</li>
+            <li>Gerar texturas orgânicas em computação gráfica;</li>
+        </ul>
+        <p>O diagrama de Voronoi pode ser estendido para outras dimensões, de modo que, em sua versão <b>tridimensional</b>, o conjunto de regiões de Voronoi é delimitado por planos.</p>
     </div>
 
     <div class="content">
-        <h1 id="gabarito"> Gabarito </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam neque vel libero fringilla, ut cursus justo tincidunt. Suspendisse eget neque iaculis, maximus magna sit amet, egestas nunc. Sed sollicitudin quis massa et porttitor. In augue ligula, lacinia non sagittis sed, auctor sed purus. Nunc imperdiet semper sapien a tincidunt. Sed sed purus a risus scelerisque dignissim nec mattis massa. Aliquam eu felis non elit posuere tempus. Suspendisse dictum lacinia metus vel vulputate. Nam semper nunc faucibus ipsum luctus luctus. Vivamus eu augue id nulla blandit imperdiet sed et erat. Fusce porttitor accumsan mi, sed pulvinar mi placerat ac. Praesent viverra interdum facilisis. Mauris quis iaculis erat, eu sagittis leo.</p>
+        <h1 id="gabarito"> Solução </h1>
+        <p></p>
+        <div class=stlviewer data-src="{{ url_for('static', filename='stl/cubo.stl') }}"></div>
     </div>
 
     <div class="content">
         <h1 id="about"> Sobre nós </h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam neque vel libero fringilla, ut cursus justo tincidunt. Suspendisse eget neque iaculis, maximus magna sit amet, egestas nunc. Sed sollicitudin quis massa et porttitor. In augue ligula, lacinia non sagittis sed, auctor sed purus. Nunc imperdiet semper sapien a tincidunt. Sed sed purus a risus scelerisque dignissim nec mattis massa. Aliquam eu felis non elit posuere tempus. Suspendisse dictum lacinia metus vel vulputate. Nam semper nunc faucibus ipsum luctus luctus. Vivamus eu augue id nulla blandit imperdiet sed et erat. Fusce porttitor accumsan mi, sed pulvinar mi placerat ac. Praesent viverra interdum facilisis. Mauris quis iaculis erat, eu sagittis leo.</p>
+        <div class="logos">
+            <img class="logo" src="{{ url_for('static', filename='img/fau.svg') }}" alt="Logo FAU-USP">
+            <img class="logo" src="{{ url_for('static', filename='img/ime.svg') }}" alt="Logo IME-USP">
+        </div>
     </div>
+
+    <footer>
+        <img class="foot-logo" src="{{ url_for('static', filename='img/favicon.svg') }}" alt="Logo Cubo Voronoi">
+        <p class="foot-text">CUBO VORONOI 2022</p>
+        <a class="foot-link" target=”_blank” href="http://github.com/">Repositório no Github</a>
+    </footer>
 </body>
