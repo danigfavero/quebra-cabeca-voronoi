@@ -8,11 +8,6 @@ function STLViewerEnable(classname) {
 
 function STLViewer(elem, model) {
 
-    if (!WEBGL.isWebGLAvailable()) {
-        elem.appendChild(WEBGL.getWebGLErrorMessage());
-        return;
-    }
-
     var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     var camera = new THREE.PerspectiveCamera(70, elem.clientWidth / elem.clientHeight, 1, 1000);
     renderer.setSize(elem.clientWidth, elem.clientHeight);
