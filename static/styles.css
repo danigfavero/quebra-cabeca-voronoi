@@ -92,14 +92,57 @@ footer {
 
 .foot-text {
     font-size: .8rem;
-    text-align: center;
 }
 
 .foot-link {
     font-size: .6rem;
-    text-align: center;
 }
 
 .foot-logo {
     width: 8%;
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 16px;
+    }
+
+    hr {
+        margin: 1.5rem 4rem 0 4rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin: 2.5rem 0 1rem 0;
+    }
+
+    .header-link {
+        font-size: 1.5rem;
+    }
+
+    .header-menu {
+        margin-top: 1.5rem;
+        padding: 0;
+    }
+
+    .content {
+        padding-bottom: 2rem;
+    }
+
+    .logo {
+        width: 10%;
+        padding: 1rem;
+    }
+
+    .logos {
+        justify-content: center;
+    }
+
+    .foot-logo {
+        width: 6%;
+    }
+    
+    .foot-link {
+        font-size: .8rem;
+    }
 }
