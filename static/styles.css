@@ -27,6 +27,13 @@ h1 {
     margin: 4rem 0 1rem 0;
 }
 
+h2 {
+    font-weight: bold;
+    font-size: 8rem;
+    text-transform: uppercase;
+    margin: 4rem 0 1rem 0;
+}
+
 p {
     font-size: 18px;
     text-align: justify;
@@ -103,6 +110,10 @@ footer {
 
 .foot-logo {
     width: 8%;
+}
+
+.subtitle {
+    text-indent: 0;
 }
 
 @media (min-width: 768px) {
